@@ -1,0 +1,18 @@
+/*
+Theme Name: SOS Primary
+Theme URI: http://understrap.com
+Author: Holger Koenemann
+Author URI: http://www.holgerkoenemann.de
+GitHub Theme URI: holger1411/understrap
+Description: SOS Parent Theme
+Version: 0.6.2
+Text Domain: sos
+
+/*
+This file is just used to identify the theme in WordPress.
+The compiled CSS output can be found in /css/theme.css
+The SASS sources for it can be found in /sass/
+The dependencies can be found in /src/ after running "gulp copy-assets" terminal command
+
+...and now go out and play!
+*/
