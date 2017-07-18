@@ -1,3 +1,7 @@
+// @codekit-append  "mobirise-theme/js/script.js"
+// @codekit-append  "mobirise-gallery/script.js"
+// @codekit-append  "mobirise-dropdown/js/script.js"
+
 /*! tether 1.4.0 */
 
 (function(root, factory) {

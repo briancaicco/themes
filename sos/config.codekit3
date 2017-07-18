@@ -65,6 +65,16 @@
 		"oAP": "\/comments.php",
 		"oF": 0
 		},
+	"\/css\/custom-editor-style-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/custom-editor-style-min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"\/css\/custom-editor-style.css": {
 		"aP": 1,
 		"bl": 0,
@@ -94,12 +104,6 @@
 		"oAP": "\/css\/theme.min-min.css",
 		"oF": 0,
 		"oS": 3
-		},
-	"\/css\/theme.min.css.map": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/css\/theme.min.css.map",
-		"oF": 0
 		},
 	"\/fonts\/fontawesome-webfont.eot": {
 		"ft": 8192,
@@ -219,6 +223,78 @@
 		"oA": 2,
 		"oAP": "\/header.php",
 		"oF": 0
+		},
+	"\/img\/bigvolunteering1-2000x529.jpg": {
+		"ft": 16384,
+		"iS": 108960,
+		"oA": 0,
+		"oAP": "\/img\/bigvolunteering1-2000x529.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/download-1-copy-207x128.png": {
+		"ft": 32768,
+		"iS": 14141,
+		"oA": 0,
+		"oAP": "\/img\/download-1-copy-207x128.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/download-128x78.png": {
+		"ft": 32768,
+		"iS": 11549,
+		"oA": 0,
+		"oAP": "\/img\/download-128x78.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/download-2000x576.jpg": {
+		"ft": 16384,
+		"iS": 118251,
+		"oA": 0,
+		"oAP": "\/img\/download-2000x576.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/face1.jpg": {
+		"ft": 16384,
+		"iS": 29881,
+		"oA": 0,
+		"oAP": "\/img\/face1.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/face2.jpg": {
+		"ft": 16384,
+		"iS": 28657,
+		"oA": 0,
+		"oAP": "\/img\/face2.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/face3.jpg": {
+		"ft": 16384,
+		"iS": 32354,
+		"oA": 0,
+		"oAP": "\/img\/face3.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/img\/header.jpg": {
 		"ft": 16384,
@@ -361,13 +437,49 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/js\/mobirise-dropdown\/js\/script.min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/mobirise-dropdown\/js\/script.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/js\/mobirise-gallery\/player.min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/mobirise-gallery\/player.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/js\/mobirise-gallery\/script.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/js\/mobirise-gallery\/script-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/js\/mobirise-theme\/js\/script.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/js\/mobirise-theme\/js\/script-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/js\/theme.js": {
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/js\/theme-min.js",
-		"oF": 0,
-		"sC": 1,
+		"oAP": "\/js\/theme.min.js",
+		"oF": 2,
+		"sC": 0,
 		"tS": 0
 		},
 	"\/js\/theme.min.js": {
@@ -615,6 +727,12 @@
 		"oAP": "\/page-templates\/fullwidthpage.php",
 		"oF": 0
 		},
+	"\/page-templates\/homepage.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/page-templates\/homepage.php",
+		"oF": 0
+		},
 	"\/page-templates\/left-sidebarpage.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -690,11 +808,70 @@
 		"dS": 0,
 		"ft": 4,
 		"ma": 0,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "\/sass\/assets\/underscores.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
+		},
+	"\/sass\/mobirise-additional\/css\/mbr-additional-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/sass\/mobirise-additional\/css\/mbr-additional-min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/sass\/mobirise-additional\/css\/mbr-additional.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/sass\/mobirise-additional\/css\/mbr-additional-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/sass\/mobirise-dropdown\/css\/style.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/sass\/mobirise-dropdown\/css\/style-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/sass\/mobirise-gallery\/player.min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/sass\/mobirise-gallery\/player.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/sass\/mobirise-gallery\/style.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/sass\/mobirise-gallery\/style-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/sass\/mobirise-theme\/css\/style.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/sass\/mobirise-theme\/css\/style-min.css",
+		"oF": 0,
+		"oS": 3
 		},
 	"\/sass\/theme.scss": {
 		"aP": 0,
@@ -704,9 +881,9 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/sass\/theme.css",
-		"oF": 0,
-		"oS": 0,
+		"oAP": "\/css\/theme.css",
+		"oF": 2,
+		"oS": 3,
 		"uL": 1
 		},
 	"\/sass\/theme\/_contact-form7.scss": {
@@ -731,8 +908,8 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/sass\/theme\/_theme.css",
-		"oF": 0,
-		"oS": 0,
+		"oF": 1,
+		"oS": 3,
 		"uL": 1
 		},
 	"\/sass\/theme\/_theme_variables.scss": {
@@ -763,12 +940,12 @@
 		},
 	"\/screenshot.png": {
 		"ft": 32768,
-		"iS": 376827,
+		"iS": 256,
 		"oA": 0,
 		"oAP": "\/screenshot.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -2677,6 +2854,16 @@
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
+		},
+	"\/style-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/style-min-min.css",
+		"oF": 0,
+		"oS": 3
 		},
 	"\/style.css": {
 		"aP": 1,

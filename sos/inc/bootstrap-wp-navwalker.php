@@ -34,7 +34,7 @@ class WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 	 */
 	public function start_lvl( &$output, $depth = 0, $args = array() ) {
 		$indent = str_repeat( "\t", $depth );
-		$output .= "\n$indent<ul class=\" dropdown-menu\" role=\"menu\">\n";
+		$output .= "\n$indent<ul class=\" pull-xs-right dropdown-menu\" role=\"menu\">\n";
 	}
 
 	/**
@@ -107,10 +107,10 @@ class WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 			if ( $args->has_children && $depth === 0 ) {
 				$atts['href']        = '#';
 				$atts['data-toggle'] = 'dropdown';
-				$atts['class']       = 'nav-link dropdown-toggle';
+				$atts['class']       = 'nav-link link dropdown-toggle';
 			} else {
 				$atts['href']  = ! empty( $item->url ) ? $item->url : '';
-				$atts['class'] = 'nav-link';
+				$atts['class'] = 'nav-link link';
 			}
 			$atts       = apply_filters( 'nav_menu_link_attributes', $atts, $item, $args );
 			$attributes = '';

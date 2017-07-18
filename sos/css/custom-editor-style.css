@@ -6844,7 +6844,7 @@ a.skip-link {
     margin: 0px;
     padding: 0.5em 1em; }
   .dropdown-menu .menu-item a.nav-link:hover {
-    background-color: #7852B2; }
+    background-color: none; }
 
 button,
 [type="button"],
