@@ -110,7 +110,7 @@ class WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 				$atts['class']       = 'nav-link link dropdown-toggle';
 			} else {
 				$atts['href']  = ! empty( $item->url ) ? $item->url : '';
-				$atts['class'] = 'nav-link link';
+				$atts['class'] = 'nav-link link dropdown-item';
 			}
 			$atts       = apply_filters( 'nav_menu_link_attributes', $atts, $item, $args );
 			$attributes = '';

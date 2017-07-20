@@ -23,67 +23,33 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class( $class = 'landing-page' ); ?> >
 
-	<div class="hfeed site" id="page">
-
-		<section id="menu-0">
-
-			<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content','understrap' ); ?></a>
-
-
-			<!-- ******************* The Navbar Area ******************* -->
-			<div class="wrapper-fluid wrapper-navbar" id="wrapper-navbar">
-
-				<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content',
-					'understrap' ); ?></a>
-
-					<nav class="navbar navbar-dropdown navbar-toggleable-md  navbar-fixed-top bg-color navbar-inverse ">
-
-						<?php if ( 'container' == $container ) : ?>
-							<div class="container ">
-							<?php endif; ?>
-
-							<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-								<span class="navbar-toggler-icon"></span>
-							</button>
-
-							<!--  site title has branding in the menu -->
-							<div class="navbar-brand">
-
-								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="navbar-logo">
-
-									<img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/download-1-copy-207x128.png" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
-
-								</a>
-
-								<a class="navbar-caption" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-
-									<?php bloginfo( 'name' ); ?>
-
-								</a>
-
-							</div> <!-- .navbar-brand -->
-
-							<!-- The WordPress Menu goes here -->
-							<?php wp_nav_menu(
-								array(
-									'theme_location'  => 'primary',
-									'container_class' => 'collapse navbar-collapse',
-									'container_id'    => 'navbarNavDropdown',
-									'menu_class'      => 'navbar-nav ml-auto nav-dropdown collapse navbar-inverse nav navbar-toggleable-sm',
-									'fallback_cb'     => '',
-									'menu_id'         => 'exCollapsingNavbar',
-									'walker'          => new WP_Bootstrap_Navwalker(),
-								)
-								); ?>
-								<?php if ( 'container' == $container ) : ?>
-								</div><!-- .container -->
-							<?php endif; ?>
-
-						</nav><!-- .site-navigation -->
-
-					</div><!-- .wrapper-navbar end -->
-
-
-				</section><!-- #menu-0 end -->
+<nav class="navbar navbar-toggleable-md bg-primary fixed-top" <?php if ( is_user_logged_in() ) { echo 'style=" margin-top: 32px;"';  }?>>
+	<div class="container">
+	<div class="navbar-translate">
+	    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="navbar-toggler-bar bar1"></span>
+	        <span class="navbar-toggler-bar bar2"></span>
+	        <span class="navbar-toggler-bar bar3"></span>
+	    </button>
+	    <div class="navbar-brand">
+	        <a href="<?php bloginfo('url'); ?>" class="navbar-logo">
+				<img src="<?php bloginfo('template_url'); ?>/assets/img/download-1-copy-207x128.png" alt="SOS Portal">
+			</a>
+	        <a class="navbar-caption" href="<?php bloginfo('url'); ?>" >SOS Portal</a>
+	    </div>
+	</div>
+	<?php wp_nav_menu(
+		array(
+			'theme_location'  => 'primary',
+			'container_class' => 'collapse navbar-collapse justify-content-end',
+			'container_id'    => 'navigation',
+			'menu_class'      => 'navbar-nav ml-auto nav-dropdown collapse navbar-inverse nav navbar-toggleable-sm',
+			'fallback_cb'     => '',
+			'menu_id'         => 'navbar-nav',
+			'walker'          => new WP_Bootstrap_Navwalker(),
+		)
+		); ?>
+    </div>
+</nav>

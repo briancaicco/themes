@@ -13,38 +13,56 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <?php get_sidebar( 'footerfull' ); ?>
 
-<section class="mbr-section mbr-section-md-padding mbr-footer footer1" id="contacts1-6" style="background-color: rgb(10, 43, 61); padding-top: 90px; padding-bottom: 90px;">
-    
+
+<section class="pre-footer">
+
     <div class="container">
         <div class="row">
-            <div class="mbr-footer-content col-xs-12 col-md-3">
-                <div><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/download-128x78.png"></div>
+            <div class="col-xs-12 col-md-3">
+                <div><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/assets/img/download-128x78.png"></div>
             </div>
-            <div class="mbr-footer-content col-xs-12 col-md-3">
-                <p><strong>Address</strong><br>
-1234 Street Name<br>
-City, AA 99999</p>
+            <div class="col-xs-12 col-md-3">
+                <h6>Address</h6>
+                <p>
+                    1234 Street Name<br/>
+                    City, AA 99999
+                </p>
             </div>
-            <div class="mbr-footer-content col-xs-12 col-md-3">
-                <p><strong>Contacts</strong><br>
-Email: support@mobirise.com<br>
-Phone: +1 (0) 000 0000 001<br>
-Fax: +1 (0) 000 0000 002</p>
+            <div class="col-xs-12 col-md-3">
+                <h6>Contacts</h6>
+                <p>
+                    Email: support@email.com<br/>
+                    Phone: +1 (0) 000 0000 001<br/>
+                    Fax: +1 (0) 000 0000 002
+                </p>
             </div>
-            <div class="mbr-footer-content col-xs-12 col-md-3">
-                <p><strong>Links</strong><br>
-				<a class="text-primary" href="https://mobirise.com/">Website builder</a><br>
-				<a class="text-primary" href="https://mobirise.com/mobirise-free-win.zip">Download for Windows</a><br>
-				<a class="text-primary" href="https://mobirise.com/mobirise-free-mac.zip">Download for Mac</a></p>
+            <div class="col-xs-12 col-md-3">
+                <h6>Links</h6>
+                <p>
+                    <a class="text-primary" href="#">Link 1</a><br/>
+                    <a class="text-primary" href="#">Link 2</a><br/>
+                    <a class="text-primary" href="#">Link 3</a>
+                </p>
             </div>
-
-        </div>
-    </div>
+        </div><!-- .row -->
+    </div><!-- .container -->
 </section>
 
-<footer class="mbr-small-footer mbr-section mbr-section-nopadding" id="footer1-2" style="background-color: rgb(6, 26, 37); padding-top: 1.75rem; padding-bottom: 1.75rem;">
+<footer class="footer footer-default">
     <div class="container">
-        <p class="text-xs-center">Copyright <?php echo date('Y'); ?> – Students Offering Support – <a href="#" target="_blank">Terms of Service </a>– <a href="#" target="_blank">Privacy Policy</a></p>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#" target="_blank">Terms of Service</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">Privacy Policy</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            <p class="text-xs-center">&copy; Copyright <script>document.write(new Date().getFullYear())</script> – Students Offering Support</p>
+        </div>
     </div>
 </footer>
 
