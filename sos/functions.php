@@ -44,6 +44,67 @@ add_filter( 'style_loader_src', 'remove_cssjs_ver', 10, 2 );
 add_filter( 'script_loader_src', 'remove_cssjs_ver', 10, 2 );
 
 
+// Rename Default "Post" type to "Sessions"
+//////////////////////////////////////////////////////////////////////
+function sos_change_post_label() {
+    global $menu;
+    global $submenu;
+    $menu[5][0] = 'Sessions';
+    $submenu['edit.php'][5][0] = 'Sessions';
+    $submenu['edit.php'][10][0] = 'Add Session';
+    $submenu['edit.php'][16][0] = 'Session Tags';
+}
+function sos_change_post_object() {
+    global $wp_post_types;
+    $labels = &$wp_post_types['product']->labels;
+    $labels->name = 'Sessions';
+    $labels->singular_name = 'Session';
+    $labels->add_new = 'Add Session';
+    $labels->add_new_item = 'Add Session';
+    $labels->edit_item = 'Edit Session';
+    $labels->new_item = 'Session';
+    $labels->view_item = 'View Session';
+    $labels->search_items = 'Search Sessions';
+    $labels->not_found = 'No Sessions found';
+    $labels->not_found_in_trash = 'No Sessions found in Trash';
+    $labels->all_items = 'All Sessions';
+    $labels->menu_name = 'Sessions';
+    $labels->name_admin_bar = 'Sessions';
+}
+ 
+add_action( 'admin_menu', 'sos_change_post_label' );
+add_action( 'init', 'sos_change_post_object' );
+
+
+// Rename Default "Category" Taxonomy to "Topics"
+//////////////////////////////////////////////////////////////////////
+function sos_change_cat_label() {
+    global $submenu;
+    $submenu['edit.php'][15][0] = 'Topics'; // Rename categories to Topics
+}
+add_action( 'admin_menu', 'sos_change_cat_label' );
+
+function sos_change_cat_object() {
+    global $wp_taxonomies;
+    $labels = &$wp_taxonomies['product_cat']->labels;
+    $labels->name = 'Topic';
+    $labels->singular_name = 'Topic';
+    $labels->add_new = 'Add Topic';
+    $labels->add_new_item = 'Add Topic';
+    $labels->edit_item = 'Edit Topic';
+    $labels->new_item = 'Topic';
+    $labels->view_item = 'View Topic';
+    $labels->search_items = 'Search Topics';
+    $labels->not_found = 'No Topics found';
+    $labels->not_found_in_trash = 'No Topics found in Trash';
+    $labels->all_items = 'All Topics';
+    $labels->menu_name = 'Topic';
+    $labels->name_admin_bar = 'Topic';
+}
+add_action( 'init', 'sos_change_cat_object' );
+
+
+
 /**
  * Theme setup and custom theme supports.
  */
