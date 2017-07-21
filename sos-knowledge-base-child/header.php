@@ -2,7 +2,7 @@
 /**
  * The header for our theme.
  *
- * Displays all of the <head> section and everything up till <div id="content">
+ * Displays all of the <head> section and everything up till </nav>
  *
  * @package sos-knowledge-base
  */
@@ -23,88 +23,62 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class( $class = 'landing-page' ); ?> >
 
-<div class="hfeed site" id="page">
+<nav class="navbar navbar-toggleable-md bg-primary fixed-top" <?php if ( is_user_logged_in() ) { echo 'style=" margin-top: 32px;"';  }?>>
+	<div class="container">
+	<div class="navbar-translate">
+	    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="navbar-toggler-bar bar1"></span>
+	        <span class="navbar-toggler-bar bar2"></span>
+	        <span class="navbar-toggler-bar bar3"></span>
+	    </button>
+	    <div class="navbar-brand">
+	        <a href="<?php bloginfo('url'); ?>" class="navbar-logo">
+				<img src="<?php bloginfo('template_url'); ?>/assets/img/download-1-copy-207x128.png" alt="SOS Portal">
+			</a>
+	        <a class="navbar-caption" href="<?php bloginfo('url'); ?>" >SOS Portal Knowledge base</a>
+	    </div>
+	</div>
+	<?php wp_nav_menu(
+		array(
+			'theme_location'  => 'primary',
+			'container_class' => 'collapse navbar-collapse justify-content-end',
+			'container_id'    => 'navigation',
+			'menu_class'      => 'navbar-nav ml-auto nav-dropdown collapse navbar-inverse nav navbar-toggleable-sm',
+			'fallback_cb'     => '',
+			'menu_id'         => 'navbar-nav',
+			'walker'          => new WP_Bootstrap_Navwalker(),
+		)
+		); ?>
+    </div>
+</nav>
 
-	<!-- ******************* The Navbar Area ******************* -->
-	<div class="wrapper-fluid wrapper-navbar" id="wrapper-navbar">
-
-		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content',
-		'understrap' ); ?></a>
-
-		<nav class="navbar navbar-toggleable-lg  navbar-inverse bg-inverse">
-
-		<?php if ( 'container' == $container ) : ?>
-			<div class="container ">
-		<?php endif; ?>
-
-		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-
-					<!-- Your site title as branding in the menu -->
-					<?php if ( ! has_custom_logo() ) { ?>
-
-						<?php if ( is_front_page() && is_home() ) : ?>
-
-							<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-							
-						<?php else : ?>
-
-							<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
-						
-						<?php endif; ?>
-						
-					
-					<?php } else {
-						the_custom_logo();
-					} ?><!-- end custom logo -->
-
-				<!-- The WordPress Menu goes here -->
-				<?php wp_nav_menu(
-					array(
-						'theme_location'  => 'primary',
-						'container_class' => 'collapse navbar-collapse',
-						'container_id'    => 'navbarNavDropdown',
-						'menu_class'      => 'navbar-nav ml-auto',
-						'fallback_cb'     => '',
-						'menu_id'         => 'main-menu',
-						'walker'          => new WP_Bootstrap_Navwalker(),
-					)
-				); ?>
-			<?php if ( 'container' == $container ) : ?>
-			</div><!-- .container -->
-			<?php endif; ?>
-
-		</nav><!-- .site-navigation -->
-
-	</div><!-- .wrapper-navbar end -->
 
 	<!-- ******************* The Breadcrumb Area ******************* -->
 	<?php 	// Only Display breadcrumb on single posts 
 			if ( is_single() ) { ?>
 	<div class="wrapper-fluid wrapper-navbar" id="wrapper-breadcrumb">
 
-		<nav class="navbar navbar-toggleable-lg navbar-inverse ">
+		<nav class="navbar navbar-toggleable-lg navbar-inverse nav-breadcrumb ">
 		
-		<?php if ( 'container' == $container ) : ?>
 			<div class="container ">
-		<?php endif; ?>
 				
 				<div class="col-sm-12 hidden-md-down col-xl-9 ">
 					<p><?php the_breadcrumb(); ?></p>
 				</div>
 				
 				<div class="col-sm-12 col-xl-3 search">
-					<?php get_search_form( ); ?>
+					<!-- Display Custom Search box -->
+					<form method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
+						<label class="assistive-text" for="s">Search</label>
+						<div class="form-group">
+							<input class="field form-control" id="s" name="s" type="text" placeholder="Search …">
+						</div>
+					</form>
 				</div>
-
-		<?php if ( 'container' == $container ) : ?>
 		
 		</div><!-- .container -->
-		
-		<?php endif; ?>
 	
 	</div><!-- .wrapper-navbar end -->
 	

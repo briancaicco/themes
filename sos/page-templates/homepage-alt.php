@@ -198,7 +198,6 @@ get_header(); ?>
  	<div class="container">
  		<div class="row">
  			<div class="col-md-4">
- 			<br/>
  				<div class="text-xs-center"><a class="btn btn-lg btn-info" href="#">FIND YOUR SCHOOL</a></div>
  			</div>
  			<div class="col-md-8 text-xs-center text-md-left">

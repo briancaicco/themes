@@ -28,7 +28,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 				<?php if ( have_posts() ) : ?>
 
-					<header class="page-header">
+					<div class="page-title">
 						<?php
 						// If it's a single category archive page customize our output
 						if ( is_category() ) { single_cat_title('<h1 class="page-title">Topic: ', '</h1>'); } 
@@ -37,7 +37,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 						?>
 						<hr/>
 						<br>
-					</header><!-- .page-header -->
+					</div><!-- .page-header -->
 
 					<?php /* Start the Loop */ ?>
 					<?php while ( have_posts() ) : the_post(); ?>

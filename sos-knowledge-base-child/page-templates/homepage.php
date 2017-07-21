@@ -14,7 +14,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 <div class="wrapper" id="wrapper-search">
 	<div class="home-search row justify-content-sm-center">
 		<div class="col-sm-7">
-			<?php get_search_form(); ?>
+			<!-- Display Custom Search box -->
+			<form method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
+				<label class="assistive-text" for="s">Search</label>
+				<div class="form-group">
+					<input class="field form-control" id="s" name="s" type="text" placeholder="Search …">
+				</div>
+			</form>
 		</div>
 	</div>
 </div>

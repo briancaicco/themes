@@ -2,9 +2,9 @@
 /**
  * The header for our theme.
  *
- * Displays all of the <head> section and everything up till <div id="content">
+ * Displays all of the <head> section and everything up till </nav>
  *
- * @package sos-knowledge-base
+ * @package sos-primary-theme
  */
 
 $container = get_theme_mod( 'understrap_container_type' );

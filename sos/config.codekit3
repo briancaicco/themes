@@ -302,96 +302,6 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/now-ui\/avatar.jpg": {
-		"ft": 16384,
-		"iS": 44128,
-		"oA": 0,
-		"oAP": "\/assets\/img\/now-ui\/avatar.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/assets\/img\/now-ui\/bg1.jpg": {
-		"ft": 16384,
-		"iS": 458312,
-		"oA": 0,
-		"oAP": "\/assets\/img\/now-ui\/bg1.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/assets\/img\/now-ui\/bg11.jpg": {
-		"ft": 16384,
-		"iS": 335695,
-		"oA": 0,
-		"oAP": "\/assets\/img\/now-ui\/bg11.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/assets\/img\/now-ui\/bg3.jpg": {
-		"ft": 16384,
-		"iS": 324707,
-		"oA": 0,
-		"oAP": "\/assets\/img\/now-ui\/bg3.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/assets\/img\/now-ui\/bg4.jpg": {
-		"ft": 16384,
-		"iS": 380311,
-		"oA": 0,
-		"oAP": "\/assets\/img\/now-ui\/bg4.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/assets\/img\/now-ui\/bg5.jpg": {
-		"ft": 16384,
-		"iS": 200287,
-		"oA": 0,
-		"oAP": "\/assets\/img\/now-ui\/bg5.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/assets\/img\/now-ui\/bg6.jpg": {
-		"ft": 16384,
-		"iS": 562588,
-		"oA": 0,
-		"oAP": "\/assets\/img\/now-ui\/bg6.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/assets\/img\/now-ui\/bg7.jpg": {
-		"ft": 16384,
-		"iS": 266903,
-		"oA": 0,
-		"oAP": "\/assets\/img\/now-ui\/bg7.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/assets\/img\/now-ui\/bg8.jpg": {
-		"ft": 16384,
-		"iS": 170460,
-		"oA": 0,
-		"oAP": "\/assets\/img\/now-ui\/bg8.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
 	"\/assets\/img\/now-ui\/blurred-image-1.jpg": {
 		"ft": 16384,
 		"iS": 82591,
@@ -400,17 +310,6 @@
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
-		"q": 100
-		},
-	"\/assets\/img\/now-ui\/creative-tim-white-slim2.png": {
-		"ft": 32768,
-		"iS": 27181,
-		"oA": 0,
-		"oAP": "\/assets\/img\/now-ui\/creative-tim-white-slim2.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
 		"q": 100
 		},
 	"\/assets\/img\/now-ui\/default-avatar.png": {
@@ -422,16 +321,6 @@
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
-		"q": 100
-		},
-	"\/assets\/img\/now-ui\/eva.jpg": {
-		"ft": 16384,
-		"iS": 95014,
-		"oA": 0,
-		"oAP": "\/assets\/img\/now-ui\/eva.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
 		"q": 100
 		},
 	"\/assets\/img\/now-ui\/favicon.png": {
@@ -1545,70 +1434,6 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/now-ui\/header.jpg": {
-		"ft": 16384,
-		"iS": 594341,
-		"oA": 0,
-		"oAP": "\/assets\/img\/now-ui\/header.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/assets\/img\/now-ui\/hero-image-1.png": {
-		"ft": 32768,
-		"iS": 1300538,
-		"oA": 0,
-		"oAP": "\/assets\/img\/now-ui\/hero-image-1.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/assets\/img\/now-ui\/hero-image-2.png": {
-		"ft": 32768,
-		"iS": 789915,
-		"oA": 0,
-		"oAP": "\/assets\/img\/now-ui\/hero-image-2.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/assets\/img\/now-ui\/hero-image-3.png": {
-		"ft": 32768,
-		"iS": 135550,
-		"oA": 0,
-		"oAP": "\/assets\/img\/now-ui\/hero-image-3.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/assets\/img\/now-ui\/invision-white-slim.png": {
-		"ft": 32768,
-		"iS": 9366,
-		"oA": 0,
-		"oAP": "\/assets\/img\/now-ui\/invision-white-slim.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/assets\/img\/now-ui\/landing.jpg": {
-		"ft": 16384,
-		"iS": 162887,
-		"oA": 0,
-		"oAP": "\/assets\/img\/now-ui\/landing.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
 	"\/assets\/img\/now-ui\/login.jpg": {
 		"ft": 16384,
 		"iS": 307694,
@@ -1617,38 +1442,6 @@
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
-		"q": 100
-		},
-	"\/assets\/img\/now-ui\/logo-square.jpg": {
-		"ft": 16384,
-		"iS": 19947,
-		"oA": 0,
-		"oAP": "\/assets\/img\/now-ui\/logo-square.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/assets\/img\/now-ui\/logo.png": {
-		"ft": 32768,
-		"iS": 4120,
-		"oA": 0,
-		"oAP": "\/assets\/img\/now-ui\/logo.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/assets\/img\/now-ui\/now-logo.png": {
-		"ft": 32768,
-		"iS": 4231,
-		"oA": 0,
-		"oAP": "\/assets\/img\/now-ui\/now-logo.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
 		"q": 100
 		},
 	"\/assets\/img\/now-ui\/nucleo-logo.svg": {
@@ -1660,26 +1453,6 @@
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
-		},
-	"\/assets\/img\/now-ui\/profile.jpg": {
-		"ft": 16384,
-		"iS": 123776,
-		"oA": 0,
-		"oAP": "\/assets\/img\/now-ui\/profile.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/assets\/img\/now-ui\/ryan.jpg": {
-		"ft": 16384,
-		"iS": 64509,
-		"oA": 0,
-		"oAP": "\/assets\/img\/now-ui\/ryan.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
 		},
 	"\/assets\/img\/now-ui\/writing.jpg": {
 		"ft": 16384,
