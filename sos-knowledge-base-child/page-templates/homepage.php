@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Home Page
+ * Template Name: Home Page - Knowledge Base
  *
  * This template can be used to override the default template and sidebar setup
  *
