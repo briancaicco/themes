@@ -21,6 +21,62 @@ function theme_enqueue_styles() {
 }
 
 
+// Custom SOS Login Button -  Displayed on /page-templates/login-page.php
+//////////////////////////////////////////////////////////////////////
+function sos_wp_loginout($redirect = '', $echo = true) {
+    if ( ! is_user_logged_in() )
+        $link = '<a href="' . esc_url( wp_login_url($redirect) ) . '" class="btn btn-info">' . __('Log in') . '</a>';
+    else
+        $link = '<a href="' . esc_url( wp_logout_url($redirect) ) . '" class="btn btn-info">' . __('Log out') . '</a>';
+ 
+    if ( $echo ) {
+        /**
+         * Filters the HTML output for the Log In/Log Out link.
+         *
+         * @since 1.5.0
+         *
+         * @param string $link The HTML link content.
+         */
+        echo apply_filters( 'loginout', $link );
+    } else {
+        /** This filter is documented in wp-includes/general-template.php */
+        return apply_filters( 'loginout', $link );
+    }
+}
+
+// Custom SOS Register Button - Displayed on /page-templates/login-page.php 
+//////////////////////////////////////////////////////////////////////
+function sos_wp_register( $before = '<li>', $after = '</li>', $echo = true ) {
+    if ( ! is_user_logged_in() ) {
+        if ( get_option('users_can_register') )
+            $link = $before . '<a href="' . esc_url( wp_registration_url() ) . '" class="btn btn-info">' . __('Create Account') . '</a>' . $after;
+        else
+            $link = '';
+    } elseif ( current_user_can( 'read' ) ) {
+        $link = $before . '<a href="' . admin_url() . '" class="btn btn-info">' . __('View Dashboard') . '</a>' . $after;
+    } else {
+        $link = '';
+    }
+ 
+    /**
+     * Filters the HTML link to the Registration or Admin page.
+     *
+     * Users are sent to the admin page if logged-in, or the registration page
+     * if enabled and logged-out.
+     *
+     * @since 1.5.0
+     *
+     * @param string $link The HTML code for the link to the Registration or Admin page.
+     */
+    $link = apply_filters( 'register', $link );
+ 
+    if ( $echo ) {
+        echo $link;
+    } else {
+        return $link;
+    }
+}
+
 // // Allow SVG Upload
 // //////////////////////////////////////////////////////////////////////
 // function cc_mime_types_kb($mimes) {

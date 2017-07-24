@@ -239,28 +239,6 @@
 		"opt": 0,
 		"q": 100
 		},
-	"\/assets\/img\/download-1-copy-207x128.png": {
-		"ft": 32768,
-		"iS": 14141,
-		"oA": 0,
-		"oAP": "\/assets\/img\/download-1-copy-207x128.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/assets\/img\/download-128x78.png": {
-		"ft": 32768,
-		"iS": 11549,
-		"oA": 0,
-		"oAP": "\/assets\/img\/download-128x78.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
 	"\/assets\/img\/download-2000x576.jpg": {
 		"ft": 16384,
 		"iS": 118251,
@@ -1463,6 +1441,46 @@
 		"oIPL": 0,
 		"opt": 1,
 		"q": 100
+		},
+	"\/assets\/img\/sos-logo-128x78.png": {
+		"ft": 32768,
+		"iS": 11549,
+		"oA": 0,
+		"oAP": "\/assets\/img\/sos-logo-128x78.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/img\/sos-logo-207x128.png": {
+		"ft": 32768,
+		"iS": 14141,
+		"oA": 0,
+		"oAP": "\/assets\/img\/sos-logo-207x128.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/js\/color-scheme-control.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/color-scheme-control-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/assets\/js\/customizer-min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/customizer-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
 		},
 	"\/assets\/js\/customizer.js": {
 		"ft": 64,

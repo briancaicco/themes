@@ -35,6 +35,71 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"\/assets\/img\/chapters\/mcmaster\/mcmaster_logo.png": {
+		"ft": 32768,
+		"iS": 167283,
+		"oA": 0,
+		"oAP": "\/assets\/img\/chapters\/mcmaster\/mcmaster_logo.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/img\/chapters\/ubc\/ubc_logo.png": {
+		"ft": 32768,
+		"iS": 953750,
+		"oA": 0,
+		"oAP": "\/assets\/img\/chapters\/ubc\/ubc_logo.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/img\/chapters\/uw\/uw_logo.png": {
+		"ft": 32768,
+		"iS": 71488,
+		"oA": 0,
+		"oAP": "\/assets\/img\/chapters\/uw\/uw_logo.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/img\/chapters\/wlu\/wlu_logo.png": {
+		"ft": 32768,
+		"iS": 54519,
+		"oA": 0,
+		"oAP": "\/assets\/img\/chapters\/wlu\/wlu_logo.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/img\/login-page-bg.jpg": {
+		"ft": 16384,
+		"iS": 69597,
+		"oA": 0,
+		"oAP": "\/assets\/img\/login-page-bg.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/assets\/img\/sos-logo-207x128.png": {
+		"ft": 32768,
+		"iS": 14141,
+		"oA": 0,
+		"oAP": "\/assets\/img\/sos-logo-207x128.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/assets\/js\/child-theme-min.js": {
 		"ft": 64,
 		"mi": 1,
@@ -51,6 +116,15 @@
 		"oAP": "\/assets\/js\/child-theme-min.js",
 		"oF": 0,
 		"sC": 0,
+		"tS": 0
+		},
+	"\/assets\/js\/color-scheme-control.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/color-scheme-control-min.js",
+		"oF": 0,
+		"sC": 1,
 		"tS": 0
 		},
 	"\/assets\/sass\/child-theme.scss": {
@@ -1962,6 +2036,12 @@
 		"oAP": "\/inc\/breadcrumbs.php",
 		"oF": 0
 		},
+	"\/inc\/customizer.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/inc\/customizer.php",
+		"oF": 0
+		},
 	"\/inc\/recent-posts-by-category-widget.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -2062,6 +2142,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/page-templates\/left-sidebarpage.php",
+		"oF": 0
+		},
+	"\/page-templates\/login.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/page-templates\/login.php",
 		"oF": 0
 		},
 	"\/page-templates\/right-sidebarpage.php": {
