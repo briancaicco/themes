@@ -22,7 +22,7 @@ function theme_enqueue_styles() {
 
 
 // Custom SOS Login Button -  Displayed on /page-templates/login-page.php
-//////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
 function sos_wp_loginout($redirect = '', $echo = true) {
     if ( ! is_user_logged_in() )
         $link = '<a href="' . esc_url( wp_login_url($redirect) ) . '" class="btn btn-info">' . __('Log in') . '</a>';
@@ -45,7 +45,7 @@ function sos_wp_loginout($redirect = '', $echo = true) {
 }
 
 // Custom SOS Register Button - Displayed on /page-templates/login-page.php 
-//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////
 function sos_wp_register( $before = '<li>', $after = '</li>', $echo = true ) {
     if ( ! is_user_logged_in() ) {
         if ( get_option('users_can_register') )
@@ -76,6 +76,16 @@ function sos_wp_register( $before = '<li>', $after = '</li>', $echo = true ) {
         return $link;
     }
 }
+
+
+// Woocommerce products (aka sessions) - display adjustments
+//////////////////////////////////////////////////////////////////////////////////////////
+
+// Hide Image
+remove_action ( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images',  20 );
+
+// Hide Reviews
+remove_action ('woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10);
 
 // // Allow SVG Upload
 // //////////////////////////////////////////////////////////////////////
