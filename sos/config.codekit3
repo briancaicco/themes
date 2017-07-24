@@ -3719,12 +3719,6 @@
 		"oAP": "\/header.php",
 		"oF": 0
 		},
-	"\/homepage.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/homepage.php",
-		"oF": 0
-		},
 	"\/inc\/bootstrap-wp-navwalker.php": {
 		"ft": 8192,
 		"oA": 2,
