@@ -42,7 +42,7 @@ get_header(); ?>
                             $args = array(
                                 'echo'           => true,
                                 'remember'       => true,
-                                'redirect'       => ( is_ssl() ? 'https://' : 'http://' ) . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'],
+                                'redirect'       => ( is_ssl() ? 'https://' : 'http://' ) . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] . '/wp-admin',
                                 'form_id'        => 'loginform',
                                 'id_username'    => 'user_login',
                                 'id_password'    => 'user_pass',
