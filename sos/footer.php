@@ -19,7 +19,7 @@ $container = get_theme_mod( 'understrap_container_type' );
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-md-3">
-                <div><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/assets/img/download-128x78.png"></div>
+                <div><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/assets/img/sos-logo-128x78.png"></div>
             </div>
             <div class="col-xs-12 col-md-3">
                 <h6>Address</h6>
