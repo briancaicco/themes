@@ -35,7 +35,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	    </button>
 	    <div class="navbar-brand">
 	        <a href="<?php bloginfo('url'); ?>" class="navbar-logo">
-				<img src="<?php bloginfo('template_url'); ?>/assets/img/download-1-copy-207x128.png" alt="SOS Portal">
+				<img src="<?php bloginfo('template_url'); ?>/assets/img/sos-logo-207x128.png" alt="SOS Portal">
 			</a>
 	        <a class="navbar-caption" href="<?php bloginfo('url'); ?>" >SOS Portal</a>
 	    </div>
