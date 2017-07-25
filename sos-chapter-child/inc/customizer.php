@@ -1,44 +1,17 @@
 <?php
-/**
- * Understrap Theme Customizer
- *
- * @package sos-chapter-base
- */
 
 /**
- * Register basic customizer support.
+ * Registers options with the Theme Customizer
  *
- * @param object $wp_customize Customizer reference.
+ * @param      object    $wp_customize    The WordPress Theme Customizer
+ * @package    tcx
+ * @since      0.2.0
+ * @version    1.0.0
  */
-if ( ! function_exists( 'understrap_customize_register' ) ) {	
 
-	function understrap_customize_register( $wp_customize ) {
-		$color_scheme = sos_chapter_get_color_scheme();
-
-		$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
-		$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
-		$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
-
-		// Add color scheme setting and control.
-		$wp_customize->add_setting( 'color_scheme', array(
-			'default'           => 'default',
-			'sanitize_callback' => 'sos_chapter_sanitize_color_scheme',
-			'transport'         => 'postMessage',
-		) );
-
-		$wp_customize->add_control( 'color_scheme', array(
-			'label'    => __( 'Chapter Color Scheme', 'understrap' ),
-			'section'  => 'colors',
-			'type'     => 'select',
-			'choices'  => sos_chapter_get_color_scheme_choices(),
-			'priority' => 1,
-		) );
-
-
-	}
+if ( ! defined( 'ABSPATH' ) ) {
+    exit; // Exit if accessed directly
 }
-add_action( 'customize_register', 'understrap_customize_register' );
-
 
 /**
  * Remove customizer defaults.
@@ -62,211 +35,168 @@ if ( ! function_exists( 'understrap_customize_remove' ) ) {
 }
 add_action( 'customize_register', 'understrap_customize_remove', 20 );
 
-
 /**
- * Registers color schemes for Chapter theme.
+ * Register customizer support.
  *
- * Can be filtered with {@see 'sos_chapter_color_schemes'}.
- *
- * The order of colors in a colors array:
- * 1. Primary
- * 2. Secondary
- * 3. Accent
- *
- *
- * @return array An associative array of color scheme options.
+ * @param object $wp_customize Customizer reference.
  */
-function sos_chapter_get_color_schemes() {
-	/**
-	 *
-	 * 
-	 *
-	 *
-	 * @param array $schemes {
-	 *     Associative array of color schemes data.
-	 *
-	 *     @type array $slug {
-	 *         Associative array of information for setting up the color scheme.
-	 *
-	 *         @type string $label  Color scheme label.
-	 *         @type array  $colors HEX codes for default colors prepended with a hash symbol ('#').
-	 *                              Colors are defined in the following order: Main background, page
-	 *                              background, link, main text, secondary text.
-	 *     }
-	 * }
-	 */
-	return apply_filters( 'sos_chapter_color_schemes', array(
-		'default' => array(
-			'label'  => __( 'Default', 'understrap' ),
-			'colors' => array(
-				'#091F40',
-				'#005DA6',
-				'#00A8E1',
-			),
-		),
-		'dark' => array(
-			'label'  => __( 'University of British Colombia', 'understrap' ),
-			'colors' => array(
-				'#091F40',
-				'#005DA6',
-				'#00A8E1',
-			),
-		),
-		'gray' => array(
-			'label'  => __( 'University of Windsor', 'understrap' ),
-			'colors' => array(
-				'#005596',
-				'#58585B',
-				'#FFCE00',
+if ( ! function_exists( 'understrap_customize_register' ) ) {	
 
-			),
-		),
-		'red' => array(
-			'label'  => __( 'Wilfred Laurier University', 'understrap' ),
-			'colors' => array(
-				'#3C2886',
-				'#8A650B',
-				'#83261F',
+	function understrap_customize_register( $wp_customize ) {
 
-			),
-		),
-		'yellow' => array(
-			'label'  => __( 'McMaster University', 'understrap' ),
-			'colors' => array(
-				'#7C0040',
-				'#949CA1',
-				'#FEC057',
-			),
-		),
-	) );
-}
+		/**
+		 * Setup Color Scheme Overrides
+		**/
+		 
+		// add the section to contain the settings
+		$wp_customize->add_section( 'textcolors' , array(
+		    'title' =>  'Color Scheme',
+		) );
 
-if ( ! function_exists( 'sos_chapter_get_color_scheme' ) ) :
-/**
- * Retrieves the current Twenty Sixteen color scheme.
- *
- * Create your own sos_chapter_get_color_scheme() function to override in a child theme.
- *
- *
- * @return array An associative array of either the current or default color scheme HEX values.
- */
-function sos_chapter_get_color_scheme() {
-	$color_scheme_option = get_theme_mod( 'color_scheme', 'default' );
-	$color_schemes       = sos_chapter_get_color_schemes();
+		// Primary color ( h1, h2, h4. h6, widget headings, nav, links, footer )
+		$txtcolors[] = array(
+		    'slug'=>'primary', 
+		    'default' => '#000',
+		    'label' => 'Primary Color'
+		);
+		 
+		// secondary color ( site description, sidebar headings, h3, h5, nav links on hover )
+		$txtcolors[] = array(
+		    'slug'=>'secondary', 
+		    'default' => '#000',
+		    'label' => 'Secondary Color'
+		);
 
-	if ( array_key_exists( $color_scheme_option, $color_schemes ) ) {
-		return $color_schemes[ $color_scheme_option ]['colors'];
+		// accent color ( borders, highlights etc. )
+		$txtcolors[] = array(
+		    'slug'=>'accent', 
+		    'default' => '#000',
+		    'label' => 'Accent Color'
+		);
+
+		// Button color
+		$txtcolors[] = array(
+		    'slug'=>'btn_color', 
+		    'default' => '#008AB7',
+		    'label' => 'Button Color'
+		);
+		 
+		// Button color ( hover, active )
+		$txtcolors[] = array(
+		    'slug'=>'hover_button_color', 
+		    'default' => '#9e4059',
+		    'label' => 'Button Color (on hover)'
+		);
+		 
+		// link color
+		$txtcolors[] = array(
+		    'slug'=>'link_color', 
+		    'default' => '#008AB7',
+		    'label' => 'Link Color'
+		);
+		 
+		// link color ( hover, active )
+		$txtcolors[] = array(
+		    'slug'=>'hover_link_color', 
+		    'default' => '#9e4059',
+		    'label' => 'Link Color (on hover)'
+		);
+
+
+		// add the settings and controls for each color
+		foreach( $txtcolors as $txtcolor ) {
+		 
+		    // SETTINGS
+		    $wp_customize->add_setting(
+		        $txtcolor['slug'], array(
+		            'default' => $txtcolor['default'],
+		            'type' => 'option', 
+		            'capability' => 'edit_theme_options'
+		        )
+		    );
+		    // CONTROLS
+		    $wp_customize->add_control(
+		        new WP_Customize_Color_Control(
+		            $wp_customize,
+		            $txtcolor['slug'], 
+		            array('label' => $txtcolor['label'], 
+		            'section' => 'textcolors',
+		            'settings' => $txtcolor['slug'])
+		        )
+		    );
+		}
 	}
-
-	return $color_schemes['default']['colors'];
 }
-endif; // sos_chapter_get_color_scheme
+add_action( 'customize_register', 'understrap_customize_register' );
 
-if ( ! function_exists( 'sos_chapter_get_color_scheme_choices' ) ) :
-/**
- * Retrieves an array of color scheme choices registered for Twenty Sixteen.
- *
- * Create your own sos_chapter_get_color_scheme_choices() function to override
- * in a child theme.
- *
- *
- * @return array Array of color schemes.
- */
-function sos_chapter_get_color_scheme_choices() {
-	$color_schemes                = sos_chapter_get_color_schemes();
-	$color_scheme_control_options = array();
-
-	foreach ( $color_schemes as $color_scheme => $value ) {
-		$color_scheme_control_options[ $color_scheme ] = $value['label'];
-	}
-
-	return $color_scheme_control_options;
-}
-endif; // sos_chapter_get_color_scheme_choices
-
-
-if ( ! function_exists( 'sos_chapter_sanitize_color_scheme' ) ) :
-/**
- * Handles sanitization for sos color schemes.
- *
- * Create your own sos_chapter_sanitize_color_scheme() function to override
- * in a child theme.
- *
- *
- * @param string $value Color scheme name value.
- * @return string Color scheme name.
- */
-function sos_chapter_sanitize_color_scheme( $value ) {
-	$color_schemes = sos_chapter_get_color_scheme_choices();
-
-	if ( ! array_key_exists( $value, $color_schemes ) ) {
-		return 'default';
-	}
-
-	return $value;
-}
-endif; // sos_chapter_sanitize_color_scheme
 
 /**
- * Enqueues front-end CSS for color scheme.
+ * Writes styles out the `<head>` element of the page based on the configuration options
+ * saved in the Theme Customizer.
  *
- *
- * @see wp_add_inline_style()
+ * @since      0.2.0
+ * @version    1.0.1
  */
-function sos_chapter_color_scheme_css() {
+function tcx_customizer_css() {
 
-	$color_scheme_option = get_theme_mod( 'color_scheme', 'default' );
+	// primary color
+	$primary_color = get_option( 'primary' );
+	 
+	// secondary color
+	$secondary_color = get_option( 'secondary' );
+
+	// secondary color
+	$accent_color = get_option( 'accent' );
+
+	// button color
+	$button_color = get_option( 'button_color' );
+	 
+	// hover or active button color
+	$hover_button_color = get_option( 'hover_button_color' );
+	 
+	// link color
+	$link_color = get_option( 'link_color' );
+	 
+	// hover or active link color
+	$hover_link_color = get_option( 'hover_link_color' );
 
 
-	$color_scheme = sos_chapter_get_color_scheme();
+?>
+	 <style type="text/css">
 
-	// Convert main text hex color to rgba.
-	//$color_textcolor_rgb = sos_chapter_hex2rgb( $color_scheme[3] );
+		.bg-primary {
+			background-color: <?php echo $primary_color; ?> !important;
+		}
 
-	// If the rgba values are empty return early.
-	// if ( empty( $color_textcolor_rgb ) ) {
-	// 	return;
-	// }
+		.btn-info {
+		    background-color: <?php echo $button_color; ?> !important;
+		}
 
-	// If we get this far, we have a custom color scheme.
-	$colors = array(
-		'primary'      		=> $color_scheme[0],
-		'secondary' 		=> $color_scheme[1],
-		'accent'            => $color_scheme[2],
+		.btn-info:hover {
+		    background-color: <?php echo $hover_button_color; ?> !important;
+		}
 
+	 </style>
+<?php
+} // end tcx_customizer_css
+add_action( 'wp_head', 'tcx_customizer_css' );
+
+/**
+ * Registers the Theme Customizer Preview with WordPress.
+ *
+ * @package    tcx
+ * @since      0.3.0
+ * @version    1.0.0
+ */
+function tcx_customizer_live_preview() {
+
+	wp_enqueue_script(
+		'tcx-theme-customizer',
+		get_template_directory_uri() . '/js/theme-customizer.js',
+		array( 'customize-preview' ),
+		'1.0.0',
+		true
 	);
 
-	$color_scheme_css = sos_chapter_color_scheme_css( $colors );
-
-	wp_add_inline_style( 'sos-chapter-style', $color_scheme_css );
-}
-//add_action( 'wp_enqueue_scripts', 'sos_chapter_color_scheme_css' );
-
-
-// /**
-//  * Binds the JS listener to make Customizer color_scheme control.
-//  *
-//  * Passes color scheme data as colorScheme global.
-//  *
-//  */
-// function sos_chapter_customize_control_js() {
-// 	wp_enqueue_script( 'color-scheme-control', get_template_directory_uri() . '/assets/js/color-scheme-control.js', array( 'customize-controls', 'iris', 'underscore', 'wp-util' ), '20160816', true );
-// 	wp_localize_script( 'color-scheme-control', 'colorScheme', sos_chapter_get_color_schemes() );
-// }
-// add_action( 'customize_controls_enqueue_scripts', 'sos_chapter_customize_control_js' );
-
-
-
-// /**
-//  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
-//  */
-// if ( ! function_exists( 'understrap_customize_preview_js' ) ) {
-// 	/**
-// 	 * Setup JS integration for live previewing.
-// 	 */
-// 	function understrap_customize_preview_js() {
-// 		wp_enqueue_script( 'understrap_customizer', get_template_directory_uri() . '/js/customizer.js',
-// 			array( 'customize-preview' ), '20130508', true );
-// 	}
-// }
-// add_action( 'customize_preview_init', 'understrap_customize_preview_js' );
+} // end tcx_customizer_live_preview
+add_action( 'customize_preview_init', 'tcx_customizer_live_preview' );
