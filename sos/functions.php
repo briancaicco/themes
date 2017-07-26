@@ -46,14 +46,7 @@ add_filter( 'script_loader_src', 'remove_cssjs_ver', 10, 2 );
 
 // Rename Default "Post" type to "Sessions"
 //////////////////////////////////////////////////////////////////////
-function sos_change_post_label() {
-    global $menu;
-    global $submenu;
-    $menu[5][0] = 'Sessions';
-    $submenu['edit.php'][5][0] = 'Sessions';
-    $submenu['edit.php'][10][0] = 'Add Session';
-    $submenu['edit.php'][16][0] = 'Session Tags';
-}
+
 function sos_change_post_object() {
     global $wp_post_types;
     $labels = &$wp_post_types['product']->labels;
@@ -72,17 +65,11 @@ function sos_change_post_object() {
     $labels->name_admin_bar = 'Sessions';
 }
  
-add_action( 'admin_menu', 'sos_change_post_label' );
 add_action( 'init', 'sos_change_post_object' );
 
 
 // Rename Default "Category" Taxonomy to "Topics"
 //////////////////////////////////////////////////////////////////////
-function sos_change_cat_label() {
-    global $submenu;
-    $submenu['edit.php'][15][0] = 'Topics'; // Rename categories to Topics
-}
-add_action( 'admin_menu', 'sos_change_cat_label' );
 
 function sos_change_cat_object() {
     global $wp_taxonomies;
