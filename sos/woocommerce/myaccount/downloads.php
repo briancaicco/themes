@@ -1,7 +1,7 @@
 <?php
 /**
  * Downloads
- * Updated for Understrap to maintain Woocommerce 3.0.3 compatability.
+ *
  * Shows downloads on the account page.
  *
  * This template can be overridden by copying it to yourtheme/woocommerce/myaccount/downloads.php.
@@ -59,13 +59,13 @@ do_action( 'woocommerce_before_account_downloads', $has_downloads ); ?>
 										</a>
 										<?php break;
 									case 'download-remaining' :
-										echo is_numeric( $download['downloads_remaining'] ) ? esc_html( $download['downloads_remaining'] ) : __( '&infin;', 'understrap' );
+										echo is_numeric( $download['downloads_remaining'] ) ? esc_html( $download['downloads_remaining'] ) : __( '&infin;', 'woocommerce' );
 										break;
 									case 'download-expires' : ?>
 										<?php if ( ! empty( $download['access_expires'] ) ) : ?>
 											<time datetime="<?php echo date( 'Y-m-d', strtotime( $download['access_expires'] ) ); ?>" title="<?php echo esc_attr( strtotime( $download['access_expires'] ) ); ?>"><?php echo date_i18n( get_option( 'date_format' ), strtotime( $download['access_expires'] ) ); ?></time>
 										<?php else : ?>
-											<?php _e( 'Never', 'understrap' ); ?>
+											<?php _e( 'Never', 'woocommerce' ); ?>
 										<?php endif; ?>
 										<?php break;
 									case 'download-actions' : ?>
@@ -73,12 +73,12 @@ do_action( 'woocommerce_before_account_downloads', $has_downloads ); ?>
 											$actions = array(
 												'download'  => array(
 													'url'  => $download['download_url'],
-													'name' => __( 'Download', 'understrap' ),
+													'name' => __( 'Download', 'woocommerce' ),
 												),
 											);
 											if ( $actions = apply_filters( 'woocommerce_account_download_actions', $actions, $download ) ) {
 												foreach ( $actions as $key => $action ) {
-													echo '<a href="' . esc_url( $action['url'] ) . '" class="btn btn-outline-primary' . sanitize_html_class( $key ) . '">' . esc_html( $action['name'] ) . '</a>';
+													echo '<a href="' . esc_url( $action['url'] ) . '" class="button woocommerce-Button ' . sanitize_html_class( $key ) . '">' . esc_html( $action['name'] ) . '</a>';
 												}
 											}
 										?>
@@ -94,10 +94,10 @@ do_action( 'woocommerce_before_account_downloads', $has_downloads ); ?>
 	<?php do_action( 'woocommerce_after_available_downloads' ); ?>
 <?php else : ?>
 	<div class="woocommerce-Message woocommerce-Message--info woocommerce-info">
-		<a class="btn btn-outline-primary" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>">
-			<?php esc_html_e( 'Go Shop', 'understrap' ) ?>
+		<a class="woocommerce-Button button" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>">
+			<?php esc_html_e( 'Go shop', 'woocommerce' ) ?>
 		</a>
-		<?php esc_html_e( 'No downloads available yet.', 'understrap' ); ?>
+		<?php esc_html_e( 'No downloads available yet.', 'woocommerce' ); ?>
 	</div>
 <?php endif; ?>
 

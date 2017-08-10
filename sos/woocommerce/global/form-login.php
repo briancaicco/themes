@@ -25,19 +25,19 @@ if ( is_user_logged_in() ) {
 }
 
 ?>
-<form method="post" class="login" <?php if ( $hidden ) echo 'style="display:none;"'; ?>>
+<form class="woocomerce-form woocommerce-form-login login" method="post" <?php echo ( $hidden ) ? 'style="display:none;"' : ''; ?>>
 
 	<?php do_action( 'woocommerce_login_form_start' ); ?>
 
-	<?php if ( $message ) echo wpautop( wptexturize( $message ) ); ?>
+	<?php echo ( $message ) ? wpautop( wptexturize( $message ) ) : ''; ?>
 
 	<p class="form-row form-row-first">
-		<label for="username"><?php _e( 'Username or email', 'understrap' ); ?> <span class="required">*</span></label>
-		<input type="text" class="input-text form-control" name="username" id="username" />
+		<label for="username"><?php _e( 'Username or email', 'woocommerce' ); ?> <span class="required">*</span></label>
+		<input type="text" class="input-text" name="username" id="username" />
 	</p>
 	<p class="form-row form-row-last">
-		<label for="password"><?php _e( 'Password', 'understrap' ); ?> <span class="required">*</span></label>
-		<input class="input-text form-control" type="password" name="password" id="password" />
+		<label for="password"><?php _e( 'Password', 'woocommerce' ); ?> <span class="required">*</span></label>
+		<input class="input-text" type="password" name="password" id="password" />
 	</p>
 	<div class="clear"></div>
 
@@ -45,14 +45,14 @@ if ( is_user_logged_in() ) {
 
 	<p class="form-row">
 		<?php wp_nonce_field( 'woocommerce-login' ); ?>
-		<input type="submit" class="btn btn-outline-primary" name="login" value="<?php esc_attr_e( 'Login', 'understrap' ); ?>" />
+		<input type="submit" class="button" name="login" value="<?php esc_attr_e( 'Login', 'woocommerce' ); ?>" />
 		<input type="hidden" name="redirect" value="<?php echo esc_url( $redirect ) ?>" />
-		<label for="rememberme" class="inline">
-			<input name="rememberme" type="checkbox" id="rememberme" value="forever" /> <?php _e( 'Remember me', 'understrap' ); ?>
+		<label class="woocommerce-form__label woocommerce-form__label-for-checkbox inline">
+			<input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <span><?php _e( 'Remember me', 'woocommerce' ); ?></span>
 		</label>
 	</p>
 	<p class="lost_password">
-		<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php _e( 'Lost your password?', 'understrap' ); ?></a>
+		<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php _e( 'Lost your password?', 'woocommerce' ); ?></a>
 	</p>
 
 	<div class="clear"></div>

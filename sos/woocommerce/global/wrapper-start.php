@@ -10,9 +10,9 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see        https://docs.woocommerce.com/document/template-structure/
- * @author        WooThemes
- * @package    WooCommerce/Templates
+ * @see 	    https://docs.woocommerce.com/document/template-structure/
+ * @author 		WooThemes
+ * @package 	WooCommerce/Templates
  * @version     1.6.4
  */
 
@@ -20,12 +20,28 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-// load container setting
-$container = get_theme_mod( 'understrap_container_type' );
+$template = get_option( 'template' );
 
-// if we use container-fluid add some margin
-if ( 'container-fluid' === $container ) {
-	echo '<div class="wrapper" id="page-wrapper"><div class="' . $container . '" id="content" tabindex="-1"> <div class="row mx-1">';
-} else {
-	echo '<div class="wrapper" id="page-wrapper"><div class="' . $container . '" id="content" tabindex="-1"> <div class="row">';
+switch ( $template ) {
+	case 'twentyeleven' :
+		echo '<div id="primary"><div id="content" role="main" class="twentyeleven">';
+		break;
+	case 'twentytwelve' :
+		echo '<div id="primary" class="site-content"><div id="content" role="main" class="twentytwelve">';
+		break;
+	case 'twentythirteen' :
+		echo '<div id="primary" class="site-content"><div id="content" role="main" class="entry-content twentythirteen">';
+		break;
+	case 'twentyfourteen' :
+		echo '<div id="primary" class="content-area"><div id="content" role="main" class="site-content twentyfourteen"><div class="tfwc">';
+		break;
+	case 'twentyfifteen' :
+		echo '<div id="primary" role="main" class="content-area twentyfifteen"><div id="main" class="site-main t15wc">';
+		break;
+	case 'twentysixteen' :
+		echo '<div id="primary" class="content-area twentysixteen"><main id="main" class="site-main" role="main">';
+		break;
+	default :
+		echo '<div id="container"><div id="content" role="main">';
+		break;
 }
